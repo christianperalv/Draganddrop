@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends: Aventura</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <header class="p-6 bg-indigo-700 text-center">
+        <h1 class="text-4xl font-bold">League of Legends: Aventura</h1>
+        <p class="mt-2 text-lg">Sumérgete en Runaterra y toma decisiones que determinarán tu destino.</p>
+    </header>
+
+    <main class="p-6">
+        <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-semibold text-indigo-400">Instrucciones</h2>
+            <ul class="mt-4 list-disc list-inside">
+                <li>Selecciona y arrastra los ítems correctos a los huecos de la historia.</li>
+                <li>Presiona "Confirmar" para avanzar en la aventura.</li>
+                <li>Si no llenas correctamente todos los huecos, recibirás un aviso.</li>
+            </ul>
+            <button class="mt-6 bg-indigo-500 px-4 py-2 rounded hover:bg-indigo-600" onclick="startAdventure()">Comenzar</button>
+        </div>
+    </main>
+
+    <script>
+        function startAdventure() {
+            window.location.href = 'adventure.html'; // Redirige a la aventura principal
+        }
+    </script>
+</body>
+</html>

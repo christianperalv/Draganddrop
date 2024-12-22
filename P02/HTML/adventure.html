@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekko y Powder: La Máquina del Tiempo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../CSS/adventure.css" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Primera Parte de la Historia -->
+    <div class="story">
+        <h1 class="text-3xl font-bold mb-4">Ekko y Powder: La Máquina del Tiempo</h1>
+        <p class="mb-4">
+            Ekko y Powder terminan de construir la máquina del tiempo. Cuando la activan, el tiempo retrocede 4 segundos, pero algo extraño ocurre: 
+            el dispositivo empieza a vibrar y abre un portal a otro universo.
+        </p>
+        <p class="mb-4">
+            Mientras observan el portal, Ekko debe tomar una decisión inicial: 
+            <span id="choice1" class="text-yellow-400">[elige]</span>.
+        </p>
+        <img id="story-image" src="../img/ekko_powder.jpg" alt="Ekko y Powder trabajando en la máquina">
+    </div>
+
+    <!-- Opciones Iniciales -->
+    <div class="options">
+        <img src="../img/portal2.png" alt="Inspeccionar el portal" data-option="inspeccionar el portal">
+        <img src="../img/portal.png" alt="Desactivar la máquina" data-option="desactivar la máquina">
+        <img src="../img/powder_ekko_timemachine.png" alt="Pedir ayuda a Powder" data-option="pedir ayuda a Powder">
+    </div>
+
+    <!-- Botón de Confirmar -->
+    <div class="confirm-button">
+        <button id="confirm-button">Confirmar</button>
+    </div>
+
+    <!-- Segunda Parte: Estabilización del Portal -->
+    <div class="story" id="puzzle-section" style="display: none; margin-top: 2rem;">
+        <h1>Estabiliza el portal</h1>
+        <p>El portal está inestable. Arrastra los objetos necesarios para estabilizarlo en las áreas correctas.</p>
+    </div>
+
+    <!-- Objetos Arrastrables -->
+    <div class="options" id="drag-items" style="display: none;">
+        <img src="../img/engranaje.png" id="gear" alt="Engranaje" draggable="true" data-item="engranaje">
+        <img src="../img/Hexcore.png" id="core" alt="Núcleo de energía" draggable="true" data-item="núcleo">
+        <img src="../img/panel.png" id="panel" alt="Panel de control" draggable="true" data-item="panel">
+    </div>
+
+    <!-- Zonas de Destino -->
+    <div class="drop-zone-container" style="display: none;">
+        <div class="drop-zone" id="reactor">Reactor</div>
+        <div class="drop-zone" id="panelControl">Panel de Control</div>
+        <div class="drop-zone" id="stabilizer">Estabilizador</div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

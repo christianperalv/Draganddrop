@@ -1,0 +1,169 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A202C; /* Fondo oscuro */
+    color: #F7FAFC; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.story {
+    margin: 1rem 0;
+    max-width: 90%; /* Aumenta el ancho general */
+    padding: 1rem;
+}
+
+.story img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Máximo tamaño adaptable */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+}
+
+/* Opciones */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para pantallas pequeñas */
+    margin-top: 1rem;
+}
+
+.options img {
+    width: 150px; /* Más grande por defecto */
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.options img:hover {
+    transform: scale(1.1);
+}
+
+/* Botón de confirmación */
+.confirm-button {
+    margin-top: 1.5rem;
+}
+
+.confirm-button button {
+    background-color: #3182CE; /* Azul Zaun */
+    color: #FFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-button button:hover {
+    background-color: #2C5282;
+}
+
+/* Zona de arrastre */
+.drop-zone-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.drop-zone {
+    width: 200px; /* Tamaño más grande */
+    height: 200px;
+    border: 2px dashed #4A5568;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CBD5E0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.drop-zone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.drop-zone.correct {
+    background-color: #38A169; /* Verde */
+    color: #FFF;
+    border: 2px solid #2F855A;
+}
+
+.drop-zone.incorrect {
+    background-color: #E53E3E; /* Rojo */
+    color: #FFF;
+    border: 2px solid #C53030;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 1024px) {
+    .options img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .drop-zone {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .options img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .drop-zone {
+        width: 130px;
+        height: 130px;
+    }
+
+    .story img {
+        max-height: 60vh; /* Mejor ajuste para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .options img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .drop-zone {
+        width: 100px;
+        height: 100px;
+    }
+
+    .confirm-button button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .story img {
+        max-height: 50vh;
+    }
+}
